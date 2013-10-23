@@ -62,4 +62,16 @@ class Mathy
         
     end
 
+    #gcd dijkstra's algorithm
+
+    def self.gcd_dijk(m,n)
+        if m == n 
+            m
+        elsif m > n
+            gcd_dijk(m-n,n)
+        else
+            gcd_dijk(m,n-m)
+        end
+    end
+
 end

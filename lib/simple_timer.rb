@@ -24,12 +24,12 @@ class SimpleTimer
     end
 
     def start
-        @start_time = lambda{ Time.now }.call
+        @start_time = Time.now
         puts "Timer started at: #{@start_time}"
     end
 
     def stop
-        @end_time = lambda{ Time.now }.call
+        @end_time = Time.now
         puts "Time elapsed: #{((@end_time - @start_time)*@factor)} #{@unit}"
     end
 
